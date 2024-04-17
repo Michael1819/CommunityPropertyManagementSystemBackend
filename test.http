@@ -1,0 +1,9 @@
+GET http://localhost:8080/payment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxODQzOTYsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYUIzIn0.PAHuKmJWvipxgufI2KOHZJxwAKNbc4uro1a1eNrmxvg
+
+{
+  "apartment_number": "test",
+  "item": "maintenance",
+  "amount": 100
+}

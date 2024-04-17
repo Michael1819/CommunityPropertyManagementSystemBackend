@@ -1,0 +1,1020 @@
+{
+  "info": {
+    "_postman_id": "c6c023e4-1262-4ec8-aa55-27304c12816b",
+    "name": "Property Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27270541"
+  },
+  "item": [
+    {
+      "name": "Resident Signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"amy\",\n    \"password\": \"secret\",\n    \"role\": \"resident\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Manager Signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"bob\",\n    \"password\": \"secret\",\n    \"role\": \"manager\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Third Party Signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"chase\",\n    \"password\": \"secret\",\n    \"role\": \"third_party\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Resident Signin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"amy\",\n    \"password\": \"secret\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/signin",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "signin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Third Party Signin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"chase\",\n    \"password\": \"secret\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/signin",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "signin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test authentication",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/time",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "time"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Discussion",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"subject\": \"this is a subject from amy\",\n    \"content\": \"this is a content from amy\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/discussion",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "discussion"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Discussions",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/alldiscussions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "alldiscussions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get My Discussions",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/mydiscussions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mydiscussions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Reply",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"discussion_id\": 1,\n    \"content\": \"this is a reply from amy\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/reply",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reply"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get My Replies",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/reply",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reply"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Discussion Details",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/discussion",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "discussion"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Reply",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/reply",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reply"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Discussion",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/discussion",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "discussion"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Maintenance",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"subject\": \"this is a subject from amy\",\n    \"content\": \"this is a content from amy\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/maintenance",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "maintenance"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get My Maintenances",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"completed\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/mymaintenances",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mymaintenances"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put Maintenance",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODcsInJvbGUiOiJ0aGlyZF9wYXJ0eSIsInVzZXJuYW1lIjoiY2hhc2UifQ.BNtjU0mYCoFeeExhBxn6oGdntZuD7qH5QB-P4Dj1fOo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 1,\n    \"reply\": \"this is a reply from chase\",\n    \"completed\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/maintenance",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "maintenance"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Maintenances",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODcsInJvbGUiOiJ0aGlyZF9wYXJ0eSIsInVzZXJuYW1lIjoiY2hhc2UifQ.BNtjU0mYCoFeeExhBxn6oGdntZuD7qH5QB-P4Dj1fOo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"completed\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/allmaintenances",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "allmaintenances"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Bill",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODcsInJvbGUiOiJ0aGlyZF9wYXJ0eSIsInVzZXJuYW1lIjoiY2hhc2UifQ.BNtjU0mYCoFeeExhBxn6oGdntZuD7qH5QB-P4Dj1fOo",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"amy\",\n    \"maintenance_id\": 1,\n    \"item\": \"this is an item from chase\",\n    \"amount\": 10\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/bill",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bill"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get My Bills",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/bill",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bill"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Payment",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"item\": \"this is an item from amy\",\n    \"amount\": 8\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/payment",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "payment"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get My Payments",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/payment",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "payment"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get My Balance",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/balance",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "balance"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Reservation",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"facility_name\": \"tennis court\",\n    \"remark\": \"this is a reservation from amy\",\n    \"reservation_date\": \"2024-04-20\",\n    \"start_hour\": 10,\n    \"end_hour\": 12\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/reservation",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reservation"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get My Reservations",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/myreservations",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "myreservations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Reservation",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/reservation",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "reservation"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Facilities",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/facility",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "facility"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Facility Reservations",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"facility_name\": \"tennis court\",\n    \"start_date\": \"2024-04-19\",\n    \"end_date\": \"2024-04-21\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/facilityreservations",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "facilityreservations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Calendar",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMxNzIwODEsInJvbGUiOiJyZXNpZGVudCIsInVzZXJuYW1lIjoiYW15In0.We0kupbqQu0KvK6fxABnwO-lc_Jlb5VwgDqvYgPrKcc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/calendar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "calendar"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
